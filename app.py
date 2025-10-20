@@ -15,8 +15,13 @@ static_path = os.path.join(base_dir, "static")
 
 # --- Initialize Flask ---
 app = Flask(__name__, template_folder=template_path, static_folder=static_path)
+# temporary code 
+print(">>> Flask static folder:", app.static_folder)
+print(">>> Exists on disk?:", os.path.exists(app.static_folder))
+print(">>> CSS path exists?:", os.path.exists(os.path.join(app.static_folder, "style.css")))
+
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
-app.secret_key = "super_secret_key"
+app.secret_key = os.environ.get("SECRET_KEY", os.urandom(24))
 
 # --- Database setup ---
 db_path = os.path.join(base_dir, "instance", "users.db")
