@@ -1,0 +1,100 @@
+/* 🌸 General layout */
+body {
+  background-color: #ffe6f2;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* 💬 Chat container */
+.chat-container {
+  background-color: #fff;
+  width: 80%;
+  max-width: 700px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 💗 Header */
+h1 {
+  color: #ff69b4;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.logout {
+  text-decoration: none;
+  color: #cc0099;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* 💕 Chat bubbles */
+.chat-box {
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.bubble {
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 5px 0;
+  max-width: 75%;
+  font-size: 16px;
+}
+
+.user-bubble {
+  background-color: #ffd6e8;
+  align-self: flex-end;
+  color: #333;
+}
+
+.ai-bubble {
+  background-color: #fff0f7;
+  align-self: flex-start;
+  border: 1px solid #ffcce0;
+  color: #444;
+}
+
+/* 🌷 Input area */
+.chat-form {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ffb6c1;
+  font-size: 15px;
+}
+
+.chat-form button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.chat-form button:hover {
+  background-color: #ff4da6;
+}
