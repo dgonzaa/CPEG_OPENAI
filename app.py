@@ -26,7 +26,7 @@ app.secret_key = os.environ.get("SECRET_KEY", os.urandom(24))
 # --- Database setup ---
 db_path = os.path.join(base_dir, "instance", "users.db")
 os.makedirs(os.path.dirname(db_path), exist_ok=True)
-app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{db_path}"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://cpeg_openai_db_user:1eNJf4ZSerINEkrLSTLABOibpsrgWK9k@dpg-d3rc9qu3jp1c738ropa0-a/cpeg_openai_db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
