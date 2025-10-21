@@ -98,3 +98,12 @@ h1 {
 .chat-form button:hover {
   background-color: #ff4da6;
 }
+/* Add this to your style.css */
+#user-display {
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #444;
+  margin-top: 10px;
+}
