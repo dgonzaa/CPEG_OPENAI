@@ -12,7 +12,6 @@
   <div class="chat-container">
     <h1>Welcome, {{ username }} 💕</h1>
     <a class="logout" href="{{ url_for('logout') }}">Logout</a>
-    <p id="user-display"></p>
     <div class="chat-box" id="chat-box">
       {% for msg in chat_history %}
         {% if msg.role == 'user' %}
