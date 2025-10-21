@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v=6) }}">
 </head>
 <body>
-  <div id="user-display" class="user-banner"></div>
+
   <div class="chat-container">
     <h1>Welcome, {{ username }} 💕</h1>
     <a class="logout" href="{{ url_for('logout') }}">Logout</a>
@@ -31,21 +31,7 @@
   <script>
     const chatBox = document.getElementById("chat-box");
     chatBox.scrollTop = chatBox.scrollHeight;
-    window.addEventListener("load", () => {
-    fetch("/session")
-      .then(response => response.json())
-      .then(data => {
-        const userDisplay = document.getElementById("user-display");
-        if (!userDisplay) return;
-
-        if (data.logged_in) {
-          userDisplay.innerText = `Welcome back, ${data.username}! 🌸`;
-        } else {
-          userDisplay.innerText = "Session expired — please log in again.";
-        }
-      })
-      .catch(err => console.error("Error fetching session:", err));
-  });
+    
   </script>
 </body>
 </html>
