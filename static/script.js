@@ -30,13 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 window.addEventListener("load", () => {
+  // Keep it for session checking (optional)
   fetch("/session")
     .then(response => response.json())
     .then(data => {
-      if (data.logged_in) {
-        document.getElementById("user-display").innerText = `Welcome, ${data.username}!`;
-      } else {
-        document.getElementById("user-display").innerText = "Please log in.";
-      }
-    });
+      // Do nothing visually — just verify user is logged in
+      console.log("Session status:", data);
+    })
+    .catch(err => console.error("Session fetch failed:", err));
 });
+
