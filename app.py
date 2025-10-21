@@ -186,6 +186,13 @@ def api_chat():
         ai_response = f"Error: {str(e)}"
 
     return jsonify({"response": ai_response})
+@app.route('/session')
+def get_session():
+    if 'username' in session:
+        return jsonify({"logged_in": True, "username": session['username']})
+    else:
+        return jsonify({"logged_in": False})
+
 
 # ---------------- RUN APP ---------------- #
 

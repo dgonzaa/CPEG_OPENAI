@@ -29,3 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+window.addEventListener("load", () => {
+  fetch("/session")
+    .then(response => response.json())
+    .then(data => {
+      if (data.logged_in) {
+        document.getElementById("user-display").innerText = `Welcome, ${data.username}!`;
+      } else {
+        document.getElementById("user-display").innerText = "Please log in.";
+      }
+    });
+});
